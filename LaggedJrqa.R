@@ -2,14 +2,13 @@ laggedJrqa <- function(maxlag, ts1, ts2, delay, embed, rescale,
                         radius, normalize, mindiagline, minvertline, tw, method) {
   # Note:
   # This function wraps the crqa()-function from 'crqa' package.
-  # In order to run the function, the packages 'crqa' and 'tcpl',
-  # as well as their dependencies, need to be installed and loaded.
+  # In order to run the function, the packages 'crqa'
+  # as well as its dependencies, need to be installed and loaded.
   # This function suits only 3-variate time series and computes only RR.
   # The authors give no warranty for the correct functioning of the software and cannot be held legally accountable.
 
 # load libraries
-library(tcpl)
-library(crqa)
+require(crqa)
 
 # infer parameters to create empty matrix
 noTs <- dim(ts1)[2]
